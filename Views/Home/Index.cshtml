@@ -1,0 +1,76 @@
+﻿@model IEnumerable<CarouselTestimonial>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="container-fluid text-center jumbotron banner">
+        <h1 style="color: white;font-size: 36px;text-shadow: 2px 2px 4px black;">
+            Welcome to <br>Detailed Cleaning Company
+        </h1>
+    </div>
+    <h2 class="text-center w-100">We offer professional and affordable cleaning services for your home or office.</p>
+    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+    <div class="text-center row">
+        <div style="border: 2px solid black;" class="bg-blue text-dark w-100 p-3">
+            <h2 class="display-4 mb-3">Our Services</h2>
+            <p>We provide a range of cleaning services, such as:</p>
+            <ul class="list-group">
+                <li style="border-top: 2px solid black;" class="list-group-item">Deep cleaning</li>
+                <li style="border-top: 2px solid black;" class="list-group-item">General cleaning</li>
+                <li style="border-top: 2px solid black;" class="list-group-item">Carpet cleaning</li>
+                <li style="border-top: 2px solid black;" class="list-group-item">Furniture cleaning</li>
+                <li style="border-bottom: 2px solid black;border-top: 2px solid black;" class="list-group-item">Move in and out cleanings</li>
+            </ul>
+            <div class="card-body">
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">We are a professional cleaning company that offers high-quality and affordable services for your home or office. We have trained and experienced cleaners who can handle any cleaning task, from dusting and vacuuming to sanitizing and disinfecting. Whether you need a one-time deep cleaning or a regular maintenance cleaning, we have the right solution for you.</p>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" href="#">Schedule</a>
+                <a class="btn btn-secondary" href="#">Details</a>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%"id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <blockquote class="d-block w100">
+                    <p>"Detailed Cleaning Company did a fantastic job on my apartment. They were thorough, efficient, and friendly. I would highly recommend them to anyone looking for a reliable and professional cleaning service."</p>
+                    <footer>Jane Doe, Cleveland</footer> 
+                </blockquote>
+            </div>
+            <div class="carousel-item">
+                <blockquote class="d-block w100">
+                    <p>"Detailed Cleaning Company is the best cleaning service I have ever used. They are very professional, courteous, and trustworthy. They always go above and beyond to make sure everything is clean and tidy. I highly recommend them to anyone who needs a quality cleaning service."</p>
+                    <footer>Mary Jones, Macedonia</footer> 
+                </blockquote>            
+            </div>
+            <div class="carousel-item">
+                <blockquote class="d-block w100">
+                    <p>"I have been using Detailed Cleaning Company for over a year now and I am very happy with their service. They always show up on time, do a great job, and leave my house sparkling. They are also very flexible and accommodating to my schedule and needs."</p>
+                    <footer>John Smith, Akron</footer> 
+                </blockquote>
+            </div>
+        </div>
+        <br>
+        <button style="text-color:black;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+                @* <blockquote class="d-block w100">
+                    @foreach (var item in Model)
+                    {
+                        if (item.IsActive == true)
+                        {
+                            <p>@item.Testimonial</p>
+                            <footer>- @item.Name</footer>
+                        }
+                    }
+                </blockquote> *@
