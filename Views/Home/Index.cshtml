@@ -1,5 +1,4 @@
-﻿@model IEnumerable<CarouselTestimonial>
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -27,7 +26,7 @@
                 <p class="card-text">We are a professional cleaning company that offers high-quality and affordable services for your home or office. We have trained and experienced cleaners who can handle any cleaning task, from dusting and vacuuming to sanitizing and disinfecting. Whether you need a one-time deep cleaning or a regular maintenance cleaning, we have the right solution for you.</p>
             </div>
             <div class="card-footer">
-                <a class="btn btn-primary" href="#">Schedule</a>
+                <a asp-controller="Home" asp-action="Schedule" class="btn btn-primary">Schedule</a>
                 <a class="btn btn-secondary" href="#">Details</a>
             </div>
         </div>
@@ -64,13 +63,3 @@
         </button>
     </div>
 </div>
-                @* <blockquote class="d-block w100">
-                    @foreach (var item in Model)
-                    {
-                        if (item.IsActive == true)
-                        {
-                            <p>@item.Testimonial</p>
-                            <footer>- @item.Name</footer>
-                        }
-                    }
-                </blockquote> *@

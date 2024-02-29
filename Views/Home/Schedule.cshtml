@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Schedule Appointment";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<form asp-action="SubmitAppointment" method="post" class="form" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="appointmentFullName">Full Name:</label>
+        <input type="text" id="appointmentFullName" name="appointmentFullName" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="appointmentDate">Select a Date:</label>
+        <input  type="date" id="appointmentDate" name="appointmentDate" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="appointmentTime">Select a Time:</label>
+        <input type="time" id="appointmentTime" name="appointmentTime" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="appointmentType">Select an Appointment Type:</label>
+        <select id="appointmentType" name="appointmentType" class="form-control" required>
+            <option value="1">General cleaning</option>
+            <option value="2">Deep cleaning</option>
+            <option value="3">Carpet cleaning</option>
+            <option value="4">Furniture cleaning</option>
+            <option value="5">Move in and out cleanings</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="appointmentAddress">Address:</label>
+        <input type="text" id="appointmentAddress" name="appointmentAddress" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="appointmentCity">City:</label>
+        <input type="text" id="appointmentCity" name="appointmentCity" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="appointmentPhoneNumber">Phone Number:</label>
+        <input type="text" id="appointmentPhoneNumber" name="appointmentPhoneNumber" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="appointmentComments">Comments:</label>
+        <textarea id="appointmentComments" name="appointmentComments" rows="4" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="appointmentImage">Upload an Image:</label>
+        <input type="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Schedule</button>
+</form>

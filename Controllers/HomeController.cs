@@ -18,6 +18,17 @@ public class HomeController : Controller
         return View();
     }    
 
+    public IActionResult Schedule()
+    {
+        return View();
+    }
+
+    public IActionResult SubmitAppointment()
+    {
+        // If successful return AppointmentSubmitted.cshtml
+        return View("Views/Home/AppointmentSubmitted.cshtml");
+    }
+
     public IActionResult Privacy()
     {
         return View();
